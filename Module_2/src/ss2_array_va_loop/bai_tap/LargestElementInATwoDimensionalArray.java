@@ -27,6 +27,6 @@ public class LargestElementInATwoDimensionalArray {
                 }
             }
         }
-        System.out.println("Giá trị lớn nhất: " + max);
+        System.out.println("Giá trị lớn nhất trong mảng 2 chiều: " + max);
     }
 }
