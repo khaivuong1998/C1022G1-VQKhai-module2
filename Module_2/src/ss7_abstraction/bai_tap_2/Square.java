@@ -1,6 +1,6 @@
 package ss7_abstraction.bai_tap_2;
 
-public class Square extends Shape implements IColorable {
+public class Square extends Shape {
     private double width;
 
     public Square() {

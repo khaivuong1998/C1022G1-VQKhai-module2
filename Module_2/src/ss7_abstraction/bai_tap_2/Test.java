@@ -12,7 +12,7 @@ public class Test {
             if (shapeArray[i] instanceof Square) {
                 Square square = (Square) shapeArray[i];
                 System.out.println("Diện tích hình vuông: " + square.getArea());
-                if (square.isFilled() == true) {
+                if (square.isFilled()) {
                     square.howToColor();
                 }
             } else {

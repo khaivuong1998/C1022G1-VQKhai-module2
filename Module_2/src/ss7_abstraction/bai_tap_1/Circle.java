@@ -1,6 +1,6 @@
 package ss7_abstraction.bai_tap_1;
 
-public class Circle extends Shape implements IResizeable {
+public class Circle extends Shape {
     private double radius;
 
     public Circle() {

@@ -1,6 +1,6 @@
 package ss7_abstraction.bai_tap_2;
 
-public class Circle extends Shape implements IColorable {
+public class Circle extends Shape {
     private double radius;
 
     public Circle() {

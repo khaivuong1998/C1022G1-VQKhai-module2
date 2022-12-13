@@ -1,6 +1,6 @@
 package ss7_abstraction.bai_tap_1;
 
-public class Rectangle extends Shape implements IResizeable {
+public class Rectangle extends Shape {
     private double width;
     private double length;
 

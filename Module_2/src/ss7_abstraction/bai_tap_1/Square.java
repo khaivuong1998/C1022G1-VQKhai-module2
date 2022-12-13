@@ -1,6 +1,6 @@
 package ss7_abstraction.bai_tap_1;
 
-public class Square extends Shape implements IResizeable {
+public class Square extends Shape {
     private double width;
 
     public Square() {
