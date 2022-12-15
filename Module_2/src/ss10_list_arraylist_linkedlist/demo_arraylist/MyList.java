@@ -1,4 +1,4 @@
-package ss10_danh_sach_stack_va_queue.demo_arraylist;
+package ss10_list_arraylist_linkedlist.demo_arraylist;
 
 
 import java.util.ArrayList;

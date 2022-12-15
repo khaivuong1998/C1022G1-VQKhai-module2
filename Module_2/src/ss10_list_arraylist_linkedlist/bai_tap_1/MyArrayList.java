@@ -1,4 +1,4 @@
-package ss10_danh_sach_stack_va_queue.bai_tap_1;
+package ss10_list_arraylist_linkedlist.bai_tap_1;
 
 import java.util.Arrays;
 
