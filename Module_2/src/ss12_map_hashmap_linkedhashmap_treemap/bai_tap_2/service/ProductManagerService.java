@@ -44,4 +44,13 @@ public class ProductManagerService implements IProductManagerService {
 
     public void more(Product product) {
     }
+
+    public void remove(int index2) {
+    }
+
+    public void search(String product4) {
+    }
+
+    public void fix(int index3, Product product3) {
+    }
 }

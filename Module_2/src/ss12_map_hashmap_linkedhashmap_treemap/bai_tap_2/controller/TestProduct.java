@@ -15,7 +15,7 @@ public class TestProduct {
             count = Integer.parseInt(scanner.nextLine());
             switch (count) {
                 case 1:
-                    System.out.println("Sản phẩm bạn muốn thêm");
+                    System.out.println("Sản phẩm muốn thêm");
                     System.out.println("Id: ");
                     int id = Integer.parseInt(scanner.nextLine());
                     System.out.println("Tên sản phẩm: ");
@@ -25,7 +25,36 @@ public class TestProduct {
                     Product product = new Product(id, nameProduct, price);
                     productManagerService.more(product);
                     break;
+                case 2:
+                    System.out.println("Nhập sản phẩm cần xóa: ");
+                    int index2 = Integer.parseInt(scanner.nextLine());
+                    productManagerService.remove(index2);
+                case 3:
+                    System.out.println("Nhập sản phẩm muốn đổi: ");
+                    System.out.println("Id: ");
+                    int id2 = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Tên sản phẩm: ");
+                    String nameProduct2 = scanner.nextLine();
+                    System.out.println("Giá tiền: ");
+                    int price2 = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Vị trí muốn đổi: ");
+                    int index3 = Integer.parseInt(scanner.nextLine());
+                    Product product3 = new Product(id2, nameProduct2, price2);
+                    productManagerService.fix(index3, product3);
+                    break;
+                case 4:
+                    System.out.println("Nhập sản phẩm muốn tìm kiếm: ");
+                    System.out.println("Tên sản phẩm: ");
+                    String product4 = scanner.nextLine();
+                    productManagerService.search(product4);
+                    break;
+                case 5:
+                    productManagerService.display();
+                    break;
+                case 6:
+                    productManagerService.sort();
+                    break;
             }
-        }
+        } while (count < 6);
     }
 }
