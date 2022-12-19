@@ -28,8 +28,8 @@ public class ProductManagerService implements IProductManagerService {
     }
 
     @Override
-    public void remove(int index) {
-        repository.remove(index);
+    public void remove(int id) {
+        repository.remove(id);
     }
 
     @Override

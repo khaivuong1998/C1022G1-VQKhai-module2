@@ -14,7 +14,7 @@ public class TestProduct {
             int count = Integer.parseInt(scanner.nextLine());
             switch (count) {
                 case 1:
-                    System.out.println("Sản phẩm muốn thêm");
+                    System.out.println("Nhập sản phẩm muốn thêm");
                     System.out.println("Id: ");
                     int id = Integer.parseInt(scanner.nextLine());
                     System.out.println("Tên sản phẩm: ");
@@ -25,9 +25,10 @@ public class TestProduct {
                     productManagerService.more(product);
                     break;
                 case 2:
-                    System.out.println("Nhập sản phẩm cần xóa: ");
+                    System.out.println("Nhập id sản phẩm cần xóa: ");
                     int index2 = Integer.parseInt(scanner.nextLine());
                     productManagerService.remove(index2);
+                    break;
                 case 3:
                     System.out.println("Nhập sản phẩm muốn đổi: ");
                     System.out.println("Id: ");
@@ -36,7 +37,7 @@ public class TestProduct {
                     String name3 = scanner.nextLine();
                     System.out.println("Giá tiền: ");
                     int price3 = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Vị trí muốn đổi: ");
+                    System.out.println("Nhập id muốn đổi: ");
                     int index3 = Integer.parseInt(scanner.nextLine());
                     Product product3 = new Product(id3, name3, price3);
                     productManagerService.fix(index3, product3);

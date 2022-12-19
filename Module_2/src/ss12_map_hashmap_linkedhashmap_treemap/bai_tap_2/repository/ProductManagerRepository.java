@@ -29,7 +29,8 @@ public class ProductManagerRepository implements IProductManagerRepository {
                 "3.Sửa sản phẩm: \n" +
                 "4.Tìm kiếm sản phẩm: \n" +
                 "5.Hiển thị sản phẩm: \n" +
-                "6.Sắp xếp sản phẩm: \n");
+                "6.Sắp xếp sản phẩm: \n" +
+                "7.Thoát lựa chon:");
     }
 
     @Override
@@ -47,20 +48,30 @@ public class ProductManagerRepository implements IProductManagerRepository {
     @Override
     public void search(String name) {
         for (int i = 0; i < myProduct.size(); i++) {
-            if (myProduct.get(i).getName().contains(name)){
+            if (myProduct.get(i).getName().equals(name)){
                 System.out.println(myProduct.get(i));
             }
         }
     }
 
     @Override
-    public void remove(int index) {
-        myProduct.remove(index);
+    public void remove(int id) {
+//        myProduct.remove(index);
+        for (int i = 0; i < myProduct.size(); i++) {
+            if (id == myProduct.get(i).getId()) {
+                myProduct.remove(myProduct.get(i));
+            }
+        }
     }
 
     @Override
-    public void fix(int index, Product product) {
-        myProduct.set(index, product);
+    public void fix(int id, Product product) {
+//        myProduct.set(index, product);
+        for (int i = 0; i < myProduct.size(); i++) {
+            if (id == myProduct.get(i).getId()) {
+                myProduct.set(myProduct.indexOf(myProduct.get(i)), product);
+            }
+        }
     }
 
     @Override
@@ -68,7 +79,7 @@ public class ProductManagerRepository implements IProductManagerRepository {
         Collections.sort(myProduct, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                return o1.getId() - o2.getId();
+                return o1.getPrice() - o2.getPrice();
             }
         });
     }

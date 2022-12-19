@@ -7,7 +7,7 @@ public interface IProductManagerService {
     void display();
     void more(Product product);
     void search(String name);
-    void remove(int index);
+    void remove(int id);
     void fix(int index, Product product);
     void sort();
 }
