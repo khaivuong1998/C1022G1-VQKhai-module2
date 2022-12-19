@@ -30,6 +30,8 @@ public class TestProduct {
                     productManagerService.remove(index2);
                     break;
                 case 3:
+                    System.out.println("Nhập id muốn đổi: ");
+                    int index3 = Integer.parseInt(scanner.nextLine());
                     System.out.println("Nhập sản phẩm muốn đổi: ");
                     System.out.println("Id: ");
                     int id3 = Integer.parseInt(scanner.nextLine());
@@ -37,8 +39,6 @@ public class TestProduct {
                     String name3 = scanner.nextLine();
                     System.out.println("Giá tiền: ");
                     int price3 = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Nhập id muốn đổi: ");
-                    int index3 = Integer.parseInt(scanner.nextLine());
                     Product product3 = new Product(id3, name3, price3);
                     productManagerService.fix(index3, product3);
                     break;

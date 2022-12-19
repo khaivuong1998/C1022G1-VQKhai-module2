@@ -9,12 +9,12 @@ import java.util.Comparator;
 import java.util.List;
 
 public class ProductManagerRepository implements IProductManagerRepository {
-    List<Product> myProduct = new ArrayList<>();
-    Product product1 = new Product(1, "Exciter", 50000000);
-    Product product2 = new Product(2, "Sirius", 20000000);
-    Product product3 = new Product(3, "Jupiter", 22000000);
-    Product product4 = new Product(4, "Air Blade", 43000000);
-    {
+    static List<Product> myProduct = new ArrayList<>();
+    static Product product1 = new Product(1, "Exciter", 50000000);
+    static Product product2 = new Product(2, "Sirius", 20000000);
+    static Product product3 = new Product(3, "Jupiter", 22000000);
+    static Product product4 = new Product(4, "Air Blade", 43000000);
+    static {
         myProduct.add(product1);
         myProduct.add(product2);
         myProduct.add(product3);
@@ -48,7 +48,7 @@ public class ProductManagerRepository implements IProductManagerRepository {
     @Override
     public void search(String name) {
         for (int i = 0; i < myProduct.size(); i++) {
-            if (myProduct.get(i).getName().equals(name)){
+            if (myProduct.get(i).getName().contains(name)){
                 System.out.println(myProduct.get(i));
             }
         }
@@ -60,6 +60,8 @@ public class ProductManagerRepository implements IProductManagerRepository {
         for (int i = 0; i < myProduct.size(); i++) {
             if (id == myProduct.get(i).getId()) {
                 myProduct.remove(myProduct.get(i));
+            } else {
+                System.out.println("Id cần xóa không đúng, mời nhập lại");
             }
         }
     }
@@ -70,6 +72,10 @@ public class ProductManagerRepository implements IProductManagerRepository {
         for (int i = 0; i < myProduct.size(); i++) {
             if (id == myProduct.get(i).getId()) {
                 myProduct.set(myProduct.indexOf(myProduct.get(i)), product);
+                break;
+            } else {
+                System.out.println("Id cần sửa không đúng, mời nhập lại ");
+                break;
             }
         }
     }
