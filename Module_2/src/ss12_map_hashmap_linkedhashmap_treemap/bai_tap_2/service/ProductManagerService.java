@@ -5,7 +5,7 @@ import ss12_map_hashmap_linkedhashmap_treemap.bai_tap_2.repository.IProductManag
 import ss12_map_hashmap_linkedhashmap_treemap.bai_tap_2.repository.ProductManagerRepository;
 
 public class ProductManagerService implements IProductManagerService {
-    private IProductManagerRepository repository = new ProductManagerRepository();
+    public IProductManagerRepository repository = new ProductManagerRepository();
 
     @Override
     public void menu() {
@@ -18,23 +18,23 @@ public class ProductManagerService implements IProductManagerService {
     }
 
     @Override
-    public void more() {
-        repository.more();
+    public void more(Product product) {
+        repository.more(product);
     }
 
     @Override
-    public void search() {
-        repository.search();
+    public void search(String name) {
+        repository.search(name);
     }
 
     @Override
-    public void remove() {
-        repository.remove();
+    public void remove(int index) {
+        repository.remove(index);
     }
 
     @Override
-    public void fix() {
-        repository.fix();
+    public void fix(int index, Product product) {
+        repository.fix(index, product);
     }
 
     @Override
@@ -42,15 +42,34 @@ public class ProductManagerService implements IProductManagerService {
         repository.sort();
     }
 
-    public void more(Product product) {
-    }
-
-    public void remove(int index2) {
-    }
-
-    public void search(String product4) {
-    }
-
-    public void fix(int index3, Product product3) {
-    }
+//    @Override
+//    public void menu() {
+//        repository.menu();
+//    }
+//
+//    @Override
+//    public void display() {
+//        repository.display();
+//    }
+//
+//    @Override
+//    public void sort() {
+//        repository.sort();
+//    }
+//    @Override
+//    public void more(Product product) {
+//        repository.more(product);
+//    }
+//    @Override
+//    public void remove(int index2) {
+//        repository.remove(index2);
+//    }
+//    @Override
+//    public void search(String product4) {
+//        repository.search(product4);
+//    }
+//    @Override
+//    public void fix(int index3, Product product3) {
+//        repository.fix(index3, product3);
+//    }
 }

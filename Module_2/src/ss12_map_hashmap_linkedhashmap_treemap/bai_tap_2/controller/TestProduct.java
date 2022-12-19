@@ -9,10 +9,9 @@ public class TestProduct {
     public static void main(String[] args) {
         ProductManagerService productManagerService = new ProductManagerService();
         Scanner scanner = new Scanner(System.in);
-        int count;
         do {
             productManagerService.menu();
-            count = Integer.parseInt(scanner.nextLine());
+            int count = Integer.parseInt(scanner.nextLine());
             switch (count) {
                 case 1:
                     System.out.println("Sản phẩm muốn thêm");
@@ -54,7 +53,10 @@ public class TestProduct {
                 case 6:
                     productManagerService.sort();
                     break;
+                case 7:
+                    System.exit(0);
+                    break;
             }
-        } while (count < 6);
+        } while (true);
     }
 }

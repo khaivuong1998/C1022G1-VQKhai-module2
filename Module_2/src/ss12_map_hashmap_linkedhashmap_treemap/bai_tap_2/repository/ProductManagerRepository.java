@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ProductManagerRepository extends ProductManagerService implements IProductManagerRepository {
+public class ProductManagerRepository implements IProductManagerRepository {
     List<Product> myProduct = new ArrayList<>();
     Product product1 = new Product(1, "Exciter", 50000000);
     Product product2 = new Product(2, "Sirius", 20000000);
