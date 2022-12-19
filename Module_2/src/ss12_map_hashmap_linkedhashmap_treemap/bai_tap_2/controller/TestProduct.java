@@ -18,10 +18,10 @@ public class TestProduct {
                     System.out.println("Id: ");
                     int id = Integer.parseInt(scanner.nextLine());
                     System.out.println("Tên sản phẩm: ");
-                    String nameProduct = scanner.nextLine();
+                    String name = scanner.nextLine();
                     System.out.println("Giá tiền: ");
                     int price = Integer.parseInt(scanner.nextLine());
-                    Product product = new Product(id, nameProduct, price);
+                    Product product = new Product(id, name, price);
                     productManagerService.more(product);
                     break;
                 case 2:
@@ -31,14 +31,14 @@ public class TestProduct {
                 case 3:
                     System.out.println("Nhập sản phẩm muốn đổi: ");
                     System.out.println("Id: ");
-                    int id2 = Integer.parseInt(scanner.nextLine());
+                    int id3 = Integer.parseInt(scanner.nextLine());
                     System.out.println("Tên sản phẩm: ");
-                    String nameProduct2 = scanner.nextLine();
+                    String name3 = scanner.nextLine();
                     System.out.println("Giá tiền: ");
-                    int price2 = Integer.parseInt(scanner.nextLine());
+                    int price3 = Integer.parseInt(scanner.nextLine());
                     System.out.println("Vị trí muốn đổi: ");
                     int index3 = Integer.parseInt(scanner.nextLine());
-                    Product product3 = new Product(id2, nameProduct2, price2);
+                    Product product3 = new Product(id3, name3, price3);
                     productManagerService.fix(index3, product3);
                     break;
                 case 4:
