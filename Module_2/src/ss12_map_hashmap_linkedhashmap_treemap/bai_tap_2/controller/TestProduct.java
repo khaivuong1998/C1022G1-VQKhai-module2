@@ -31,16 +31,19 @@ public class TestProduct {
                     break;
                 case 3:
                     System.out.println("Nhập id muốn đổi: ");
-                    int index3 = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Nhập sản phẩm muốn đổi: ");
-                    System.out.println("Id: ");
                     int id3 = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Tên sản phẩm: ");
-                    String name3 = scanner.nextLine();
-                    System.out.println("Giá tiền: ");
-                    int price3 = Integer.parseInt(scanner.nextLine());
-                    Product product3 = new Product(id3, name3, price3);
-                    productManagerService.fix(index3, product3);
+                    Product produc3 = productManagerService.findById(id3);
+                    if (produc3 != null) {
+                        System.out.println("Nhập tên sản phẩm: ");
+                        String name3 = scanner.nextLine();
+                        System.out.println("Nhập giá tiền: ");
+                        int price3 = Integer.parseInt(scanner.nextLine());
+                        produc3.setName(name3);
+                        produc3.setPrice(price3);
+                        productManagerService.fix(produc3);
+                    } else {
+                        System.out.println("Id không đúng");
+                    }
                     break;
                 case 4:
                     System.out.println("Nhập sản phẩm muốn tìm kiếm: ");
@@ -52,9 +55,12 @@ public class TestProduct {
                     productManagerService.display();
                     break;
                 case 6:
-                    productManagerService.sort();
+                    productManagerService.sortPrice();
                     break;
                 case 7:
+                    productManagerService.sortId();
+                    break;
+                case 8:
                     System.exit(0);
                     break;
             }

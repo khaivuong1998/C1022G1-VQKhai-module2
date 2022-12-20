@@ -8,6 +8,8 @@ public interface IProductManagerService {
     void more(Product product);
     void search(String name);
     void remove(int id);
-    void fix(int index, Product product);
-    void sort();
+    Product findById (int id);
+    void fix(Product product);
+    void sortPrice();
+    void sortId();
 }

@@ -14,6 +14,7 @@ public class ProductManagerRepository implements IProductManagerRepository {
     static Product product2 = new Product(2, "Sirius", 20000000);
     static Product product3 = new Product(3, "Jupiter", 22000000);
     static Product product4 = new Product(4, "Air Blade", 43000000);
+
     static {
         myProduct.add(product1);
         myProduct.add(product2);
@@ -23,14 +24,15 @@ public class ProductManagerRepository implements IProductManagerRepository {
 
     @Override
     public void menu() {
-        System.out.println("Chọn thư mục bạn muốn sử dụng: \n" +
+        System.out.println("------Chọn thư mục bạn muốn sử dụng------ \n" +
                 "1.Thêm sản phẩm: \n" +
                 "2.Xóa sản phẩm: \n" +
                 "3.Sửa sản phẩm: \n" +
                 "4.Tìm kiếm sản phẩm: \n" +
                 "5.Hiển thị sản phẩm: \n" +
-                "6.Sắp xếp sản phẩm: \n" +
-                "7.Thoát lựa chon:");
+                "6.Sắp xếp sản phẩm theo id: \n" +
+                "7.Sắp xếp sản phẩm theo giá: \n" +
+                "8.Thoát lựa chon:");
     }
 
     @Override
@@ -48,7 +50,7 @@ public class ProductManagerRepository implements IProductManagerRepository {
     @Override
     public void search(String name) {
         for (int i = 0; i < myProduct.size(); i++) {
-            if (myProduct.get(i).getName().contains(name)){
+            if (myProduct.get(i).getName().contains(name)) {
                 System.out.println(myProduct.get(i));
             }
         }
@@ -56,36 +58,48 @@ public class ProductManagerRepository implements IProductManagerRepository {
 
     @Override
     public void remove(int id) {
-//        myProduct.remove(index);
         for (int i = 0; i < myProduct.size(); i++) {
             if (id == myProduct.get(i).getId()) {
                 myProduct.remove(myProduct.get(i));
-            } else {
-                System.out.println("Id cần xóa không đúng, mời nhập lại");
+                break;
             }
         }
     }
 
     @Override
-    public void fix(int id, Product product) {
-//        myProduct.set(index, product);
+    public Product findById(int id) {
+        for (Product c : myProduct) {
+            if (c.getId() == id) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void fix( Product product) {
         for (int i = 0; i < myProduct.size(); i++) {
-            if (id == myProduct.get(i).getId()) {
-                myProduct.set(myProduct.indexOf(myProduct.get(i)), product);
-                break;
-            } else {
-                System.out.println("Id cần sửa không đúng, mời nhập lại ");
+            if (myProduct.get(i).getId() == product.getId()) {
+                myProduct.set(i, product);
                 break;
             }
         }
     }
 
     @Override
-    public void sort() {
+    public void sortPrice() {
         Collections.sort(myProduct, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
                 return o1.getPrice() - o2.getPrice();
+            }
+        });
+    }
+    public void sortId() {
+        Collections.sort(myProduct, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                return o1.getId() - o2.getId();
             }
         });
     }

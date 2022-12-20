@@ -33,43 +33,20 @@ public class ProductManagerService implements IProductManagerService {
     }
 
     @Override
-    public void fix(int index, Product product) {
-        repository.fix(index, product);
+    public Product findById(int id) {
+       return repository.findById(id);
     }
 
     @Override
-    public void sort() {
-        repository.sort();
+    public void fix(Product product) {
+        repository.fix(product);
     }
 
-//    @Override
-//    public void menu() {
-//        repository.menu();
-//    }
-//
-//    @Override
-//    public void display() {
-//        repository.display();
-//    }
-//
-//    @Override
-//    public void sort() {
-//        repository.sort();
-//    }
-//    @Override
-//    public void more(Product product) {
-//        repository.more(product);
-//    }
-//    @Override
-//    public void remove(int index2) {
-//        repository.remove(index2);
-//    }
-//    @Override
-//    public void search(String product4) {
-//        repository.search(product4);
-//    }
-//    @Override
-//    public void fix(int index3, Product product3) {
-//        repository.fix(index3, product3);
-//    }
+    @Override
+    public void sortPrice() {
+        repository.sortPrice();
+    }
+    public void sortId() {
+        repository.sortId();
+    }
 }
