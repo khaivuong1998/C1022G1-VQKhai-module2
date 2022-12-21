@@ -21,7 +21,7 @@ public class IllegalTriangleExceptionTest {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input a: ");
         int a = Integer.parseInt(scanner.nextLine());
-        System.out.println("Inout b: ");
+        System.out.println("Input b: ");
         int b = Integer.parseInt(scanner.nextLine());
         System.out.println("Input c: ");
         int c = Integer.parseInt(scanner.nextLine());
