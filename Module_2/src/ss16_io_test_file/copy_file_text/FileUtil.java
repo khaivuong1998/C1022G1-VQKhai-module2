@@ -26,6 +26,7 @@ public class FileUtil {
                     count += line.length();
                 }
                 bufferedWriter.flush();
+                bufferedWriter.close();
                 System.out.println("source file có " + count + " ký tự");
             } catch (IOException e) {
                 throw new RuntimeException(e);

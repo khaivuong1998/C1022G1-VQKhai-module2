@@ -48,8 +48,8 @@ public class TestProduct {
                 case 4:
                     System.out.println("Nhập sản phẩm muốn tìm kiếm: ");
                     System.out.println("Tên sản phẩm: ");
-                    String product4 = scanner.nextLine();
-                    productManagerService.search(product4);
+                    String name4 = scanner.nextLine();
+                    productManagerService.search(name4);
                     break;
                 case 5:
                     productManagerService.display();
