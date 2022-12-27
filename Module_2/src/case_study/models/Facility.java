@@ -2,7 +2,7 @@ package case_study.models;
 
 public abstract class Facility {
     private String service;
-    private String usableSrea;
+    private String usableArea;
     private String rentalCosts;
     private String maximumNumberPeople;
     private String rentalType;
@@ -10,12 +10,12 @@ public abstract class Facility {
     public Facility() {
     }
 
-    public Facility(String service, String usableSrea, String rentalCosts, String maximumNumberPeople, String keiuThue) {
+    public Facility(String service, String usableArea, String rentalCosts, String maximumNumberPeople, String rentalType) {
         this.service = service;
-        this.usableSrea = usableSrea;
+        this.usableArea = usableArea;
         this.rentalCosts = rentalCosts;
         this.maximumNumberPeople = maximumNumberPeople;
-        this.rentalType = keiuThue;
+        this.rentalType = rentalType;
     }
 
     public String getService() {
@@ -26,12 +26,12 @@ public abstract class Facility {
         this.service = service;
     }
 
-    public String getUsableSrea() {
-        return usableSrea;
+    public String getUsableArea() {
+        return usableArea;
     }
 
-    public void setUsableSrea(String usableSrea) {
-        this.usableSrea = usableSrea;
+    public void setUsableArea(String usableArea) {
+        this.usableArea = usableArea;
     }
 
     public String getRentalCosts() {
@@ -62,7 +62,7 @@ public abstract class Facility {
     public String toString() {
         return "Facility{" +
                 "service='" + service + '\'' +
-                ", usableSrea=" + usableSrea +
+                ", usableArea=" + usableArea +
                 ", rentalCosts=" + rentalCosts +
                 ", maximumNumberPeople=" + maximumNumberPeople +
                 ", rentalType=" + rentalType +

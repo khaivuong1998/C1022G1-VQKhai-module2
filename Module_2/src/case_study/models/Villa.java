@@ -1,55 +1,55 @@
 package case_study.models;
 
 public class Villa extends Facility {
-    private String tieuChuanPhong;
-    private double dienTichHoBoi;
-    private String soTang;
+    private String roomStandard;
+    private double swimmingPoolArea;
+    private String numberFloors;
 
     public Villa() {
     }
 
-    public Villa(String service, String usableArea, String rentalCosts, String maximumNumberPeople, String rentalType, String tieuChuanPhong, double dienTichHoBoi, String soTang) {
+    public Villa(String service, String usableArea, String rentalCosts, String maximumNumberPeople, String rentalType, String roomStandard, double swimmingPoolArea, String numberFloors) {
         super(service, usableArea, rentalCosts, maximumNumberPeople, rentalType);
-        this.tieuChuanPhong = tieuChuanPhong;
-        this.dienTichHoBoi = dienTichHoBoi;
-        this.soTang = soTang;
+        this.roomStandard = roomStandard;
+        this.swimmingPoolArea = swimmingPoolArea;
+        this.numberFloors = numberFloors;
     }
 
-    public String getTieuChuanPhong() {
-        return tieuChuanPhong;
+    public String getRoomStandard() {
+        return roomStandard;
     }
 
-    public void setTieuChuanPhong(String tieuChuanPhong) {
-        this.tieuChuanPhong = tieuChuanPhong;
+    public void setRoomStandard(String roomStandard) {
+        this.roomStandard = roomStandard;
     }
 
-    public double getDienTichHoBoi() {
-        return dienTichHoBoi;
+    public double getSwimmingPoolArea() {
+        return swimmingPoolArea;
     }
 
-    public void setDienTichHoBoi(double dienTichHoBoi) {
-        this.dienTichHoBoi = dienTichHoBoi;
+    public void setSwimmingPoolArea(double swimmingPoolArea) {
+        this.swimmingPoolArea = swimmingPoolArea;
     }
 
-    public String getSoTang() {
-        return soTang;
+    public String getNumberFloors() {
+        return numberFloors;
     }
 
-    public void setSoTang(String soTang) {
-        this.soTang = soTang;
+    public void setNumberFloors(String numberFloors) {
+        this.numberFloors = numberFloors;
     }
 
     @Override
     public String toString() {
         return "Villa{" +
-                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
-                ", dienTichHoBoi=" + dienTichHoBoi +
-                ", soTang=" + soTang +
+                "roomStandard='" + roomStandard + '\'' +
+                ", swimmingPoolArea=" + swimmingPoolArea +
+                ", numberFloors=" + numberFloors +
                 "service='" + super.getService() +
                 ", usableArea=" + super.getUsableArea() +
                 ", rentalCosts=" + super.getRentalCosts() +
-                ", maximumNumberPeople=" + super.getmaximumNumberPeople() +
-                ", kieuThue=" + super.getKieuThue() +
+                ", maximumNumberPeople=" + super.getMaximumNumberPeople() +
+                ", rentalType=" + super.getRentalType() +
                 '}';
     }
 }
