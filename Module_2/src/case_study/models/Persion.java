@@ -1,65 +1,63 @@
 package case_study.models;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
-
 public abstract class Persion {
-    private String hoVaTen;
-    private String ngaySinh;
-    private String gioiTinh;
-    private int soCMND;
-    private int soDienThoai;
+    private String name;
+    private String dateOfBith;
+    private String sex;
+    private String idNumber;
+    private String phoneNumber;
     private String email;
 
     public Persion() {
     }
 
-    public Persion(String hoVaTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai, String email) {
-        this.hoVaTen = hoVaTen;
-        this.ngaySinh = ngaySinh;
-        this.gioiTinh = gioiTinh;
-        this.soCMND = soCMND;
-        this.soDienThoai = soDienThoai;
+    public Persion(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email) {
+        this.name = name;
+        this.dateOfBith = dateOfBith;
+        this.sex = sex;
+        this.idNumber = idNumber;
+        this.phoneNumber = phoneNumber;
         this.email = email;
     }
 
-    public String getHoVaTen() {
-        return hoVaTen;
+    public String getName() {
+        return name;
     }
 
-    public void setHoVaTen(String hoVaTen) {
-        this.hoVaTen = hoVaTen;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getNgaySinh() {
-        return ngaySinh;
+    public String getDateOfBith() {
+        return dateOfBith;
     }
 
-    public void setNgaySinh(String ngaySinh) {
-        this.ngaySinh = ngaySinh;
+    public void setDateOfBith(String dateOfBith) {
+        this.dateOfBith = dateOfBith;
     }
 
-    public String getGioiTinh() {
-        return gioiTinh;
+    public String getSex() {
+        return sex;
     }
 
-    public void setGioiTinh(String gioiTinh) {
-        this.gioiTinh = gioiTinh;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
-    public int getSoCMND() {
-        return soCMND;
+    public String getIdNumber() {
+        return idNumber;
     }
 
-    public void setSoCMND(int soCMND) {
-        this.soCMND = soCMND;
+    public void setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
     }
 
-    public int getSoDienThoai() {
-        return soDienThoai;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setSoDienThoai(int soDienThoai) {
-        this.soDienThoai = soDienThoai;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -73,11 +71,11 @@ public abstract class Persion {
     @Override
     public String toString() {
         return "Persion{" +
-                "hoVaTen='" + hoVaTen + '\'' +
-                ", ngaySinh='" + ngaySinh + '\'' +
-                ", gioiTinh='" + gioiTinh + '\'' +
-                ", soCMND=" + soCMND +
-                ", soDienThoai=" + soDienThoai +
+                "name='" + name + '\'' +
+                ", dateOfBith='" + dateOfBith + '\'' +
+                ", sex='" + sex + '\'' +
+                ", idNumber=" + idNumber +
+                ", phoneNumber=" + phoneNumber +
                 ", email='" + email + '\'' +
                 '}';
     }

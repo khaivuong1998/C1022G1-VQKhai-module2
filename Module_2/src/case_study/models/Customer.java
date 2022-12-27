@@ -1,55 +1,55 @@
 package case_study.models;
 
 public class Customer extends Persion {
-    private int maKhachHang;
-    private String loaiKhach;
-    private String diaChi;
+    private String customerIsCode;
+    private String typeGuest;
+    private String address;
 
     public Customer() {
     }
 
-    public Customer(String hoVaTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai, String email, int maKhachHang, String loaiKhach, String diaChi) {
-        super(hoVaTen, ngaySinh, gioiTinh, soCMND, soDienThoai, email);
-        this.maKhachHang = maKhachHang;
-        this.loaiKhach = loaiKhach;
-        this.diaChi = diaChi;
+    public Customer(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email, String customerIsCode, String typeGuest, String address) {
+        super(name, dateOfBith, sex, idNumber, phoneNumber, email);
+        this.customerIsCode = customerIsCode;
+        this.typeGuest = typeGuest;
+        this.address = address;
     }
 
-    public int getMaKhachHang() {
-        return maKhachHang;
+    public String getCustomerIsCode() {
+        return customerIsCode;
     }
 
-    public void setMaKhachHang(int maKhachHang) {
-        this.maKhachHang = maKhachHang;
+    public void setCustomerIsCode(String customerIsCode) {
+        this.customerIsCode = customerIsCode;
     }
 
-    public String getLoaiKhach() {
-        return loaiKhach;
+    public String getTypeGuest() {
+        return typeGuest;
     }
 
-    public void setLoaiKhach(String loaiKhach) {
-        this.loaiKhach = loaiKhach;
+    public void setTypeGuest(String typeGuest) {
+        this.typeGuest = typeGuest;
     }
 
-    public String getDiaChi() {
-        return diaChi;
+    public String getAddress() {
+        return address;
     }
 
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
-                "maKhachHang=" + maKhachHang +
-                ", loaiKhach='" + loaiKhach + '\'' +
-                ", diaChi='" + diaChi + '\'' +
-                "hoVaTen='" + super.getHoVaTen() + '\'' +
-                ", ngaySinh='" + super.getNgaySinh() + '\'' +
-                ", gioiTinh='" + super.getGioiTinh() + '\'' +
-                ", soCMND=" + super.getSoCMND() +
-                ", soDienThoai=" + super.getSoDienThoai() +
+                "customerIsCode=" + customerIsCode +
+                ", typeGuest='" + typeGuest + '\'' +
+                ", address='" + address + '\'' +
+                "name='" + super.getName() + '\'' +
+                ", dateOfBith='" + super.getDateOfBith() + '\'' +
+                ", sex='" + super.getSex() + '\'' +
+                ", idNumber=" + super.getIdNumber() +
+                ", phoneNumber=" + super.getPhoneNumber() +
                 ", email='" + super.getEmail() + '\'' +
                 '}';
     }

@@ -1,13 +1,14 @@
 package ss12_map_hashmap_linkedhashmap_treemap.bai_tap_2.controller;
 
 import ss12_map_hashmap_linkedhashmap_treemap.bai_tap_2.model.Product;
+import ss12_map_hashmap_linkedhashmap_treemap.bai_tap_2.service.IProductManagerService;
 import ss12_map_hashmap_linkedhashmap_treemap.bai_tap_2.service.ProductManagerService;
 
 import java.util.Scanner;
 
 public class TestProduct {
     public static void main(String[] args) {
-        ProductManagerService productManagerService = new ProductManagerService();
+        IProductManagerService productManagerService = new ProductManagerService();
         Scanner scanner = new Scanner(System.in);
         do {
             productManagerService.menu();

@@ -3,13 +3,13 @@ package case_study.models;
 public class Villa extends Facility {
     private String tieuChuanPhong;
     private double dienTichHoBoi;
-    private int soTang;
+    private String soTang;
 
     public Villa() {
     }
 
-    public Villa(String dichVu, int dienTichSuDung, int chiPhiThue, int soLuongNguoiToiDa, String keiuThue, String tieuChuanPhong, double dienTichHoBoi, int soTang) {
-        super(dichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, keiuThue);
+    public Villa(String service, String usableArea, String rentalCosts, String maximumNumberPeople, String rentalType, String tieuChuanPhong, double dienTichHoBoi, String soTang) {
+        super(service, usableArea, rentalCosts, maximumNumberPeople, rentalType);
         this.tieuChuanPhong = tieuChuanPhong;
         this.dienTichHoBoi = dienTichHoBoi;
         this.soTang = soTang;
@@ -31,11 +31,11 @@ public class Villa extends Facility {
         this.dienTichHoBoi = dienTichHoBoi;
     }
 
-    public int getSoTang() {
+    public String getSoTang() {
         return soTang;
     }
 
-    public void setSoTang(int soTang) {
+    public void setSoTang(String soTang) {
         this.soTang = soTang;
     }
 
@@ -45,10 +45,10 @@ public class Villa extends Facility {
                 "tieuChuanPhong='" + tieuChuanPhong + '\'' +
                 ", dienTichHoBoi=" + dienTichHoBoi +
                 ", soTang=" + soTang +
-                "dichVu='" + super.getDichVu() +
-                ", dienTichSuDung=" + super.getDienTichSuDung() +
-                ", chiPhiThue=" + super.getChiPhiThue() +
-                ", soLuongNguoiToiDa=" + super.getSoLuongNguoiToiDa() +
+                "service='" + super.getService() +
+                ", usableArea=" + super.getUsableArea() +
+                ", rentalCosts=" + super.getRentalCosts() +
+                ", maximumNumberPeople=" + super.getmaximumNumberPeople() +
                 ", kieuThue=" + super.getKieuThue() +
                 '}';
     }

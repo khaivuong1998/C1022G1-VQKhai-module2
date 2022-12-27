@@ -11,7 +11,7 @@ public class PalindromeString {
         Stack<String> arrStack = new Stack<>();
         Queue<String> arrQueue = new LinkedList<>();
         System.out.println("Nhập chuỗi ngẫu nhiên: ");
-        String str = scanner.nextLine();
+        String str = scanner.nextLine().toLowerCase();
         for (int i = 0; i < str.length(); i++) {
             arrStack.push(str.charAt(i) + "");
             arrQueue.offer(str.charAt(i) + "");

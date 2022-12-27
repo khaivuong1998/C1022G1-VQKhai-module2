@@ -1,32 +1,32 @@
 package case_study.models;
 
 public class Room extends Facility{
-    private String dichVuMienPhiDiKem;
+    private String FreeServiceIncluded;
 
     public Room() {
     }
 
-    public Room(String dichVu, int dienTichSuDung, int chiPhiThue, int soLuongNguoiToiDa, String keiuThue, String dichVuMienPhiDiKem) {
-        super(dichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, keiuThue);
-        this.dichVuMienPhiDiKem = dichVuMienPhiDiKem;
+    public Room(String service, String usableArea, String rentalCosts, String maximumNumberPeople, String rentalType, String FreeServiceIncluded) {
+        super(service, usableArea, rentalCosts, maximumNumberPeople, rentalType);
+        this.FreeServiceIncluded = FreeServiceIncluded;
     }
 
-    public String getDichVuMienPhiDiKem() {
-        return dichVuMienPhiDiKem;
+    public String getFreeServiceIncluded() {
+        return FreeServiceIncluded;
     }
 
-    public void setDichVuMienPhiDiKem(String dichVuMienPhiDiKem) {
-        this.dichVuMienPhiDiKem = dichVuMienPhiDiKem;
+    public void setFreeServiceIncluded(String FreeServiceIncluded) {
+        this.FreeServiceIncluded = FreeServiceIncluded;
     }
 
     @Override
     public String toString() {
         return "Room{" +
-                "dichVuMienPhiDiKem='" + dichVuMienPhiDiKem + '\'' +
-                "dichVu='" + super.getDichVu() +
-                ", dienTichSuDung=" + super.getDienTichSuDung() +
-                ", chiPhiThue=" + super.getChiPhiThue() +
-                ", soLuongNguoiToiDa=" + super.getSoLuongNguoiToiDa() +
+                "FreeServiceIncluded='" + FreeServiceIncluded + '\'' +
+                "service='" + super.getservice() +
+                ", usableArea=" + super.getusableArea() +
+                ", rentalCosts=" + super.getrentalCosts() +
+                ", maximumNumberPeople=" + super.getmaximumNumberPeople() +
                 ", kieuThue=" + super.getKieuThue() +
                 '}';
     }

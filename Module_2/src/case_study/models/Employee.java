@@ -1,66 +1,66 @@
 package case_study.models;
 
 public class Employee extends Persion{
-    private int maNhanVien;
-    private String trinhDo;
-    private String viTri;
-    private int luong;
+    private String employeeCode;
+    private String level;
+    private String position;
+    private String wage;
 
     public Employee() {
     }
 
-    public Employee(String hoVaTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai, String email, int maNhanVien, String trinhDo, String viTri, int luong) {
-        super(hoVaTen, ngaySinh, gioiTinh, soCMND, soDienThoai, email);
-        this.maNhanVien = maNhanVien;
-        this.trinhDo = trinhDo;
-        this.viTri = viTri;
-        this.luong = luong;
+    public Employee(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email, String employeeCode, String level, String position, String wage) {
+        super(name, dateOfBith, sex, idNumber, phoneNumber, email);
+        this.employeeCode = employeeCode;
+        this.level = level;
+        this.position = position;
+        this.wage = wage;
     }
 
-    public int getMaNhanVien() {
-        return maNhanVien;
+    public String getEmployeeCode() {
+        return employeeCode;
     }
 
-    public void setMaNhanVien(int maNhanVien) {
-        this.maNhanVien = maNhanVien;
+    public void setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode;
     }
 
-    public String getTrinhDo() {
-        return trinhDo;
+    public String getLevel() {
+        return level;
     }
 
-    public void setTrinhDo(String trinhDo) {
-        this.trinhDo = trinhDo;
+    public void setLevel(String level) {
+        this.level = level;
     }
 
-    public String getViTri() {
-        return viTri;
+    public String getPosition() {
+        return position;
     }
 
-    public void setViTri(String viTri) {
-        this.viTri = viTri;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public int getLuong() {
-        return luong;
+    public String getWage() {
+        return wage;
     }
 
-    public void setLuong(int luong) {
-        this.luong = luong;
+    public void setWage(String wage) {
+        this.wage = wage;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "maNhanVien=" + maNhanVien +
-                ", trinhDo='" + trinhDo + '\'' +
-                ", viTri='" + viTri + '\'' +
-                ", luong=" + luong +
-                "hoVaTen='" + super.getHoVaTen() + '\'' +
-                ", ngaySinh='" + super.getNgaySinh() + '\'' +
-                ", gioiTinh='" + super.getGioiTinh() + '\'' +
-                ", soCMND=" + super.getSoCMND() +
-                ", soDienThoai=" + super.getSoDienThoai() +
+                "employeeCode=" + employeeCode +
+                ", level='" + level + '\'' +
+                ", position='" + position + '\'' +
+                ", wage=" + wage +
+                "name='" + super.getName() + '\'' +
+                ", dateOfBith='" + super.getDateOfBith() + '\'' +
+                ", sex='" + super.getSex() + '\'' +
+                ", idNumber=" + super.getIdNumber() +
+                ", phoneNumber=" + super.getPhoneNumber() +
                 ", email='" + super.getEmail() + '\'' +
                 '}';
     }
