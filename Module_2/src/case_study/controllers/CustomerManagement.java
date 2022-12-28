@@ -78,7 +78,7 @@ public class CustomerManagement {
                         customer3.setAddress(address3);
                         customerService.edit(customer3);
                     } else {
-                        System.out.println("Mã nhân viên không hợp lệ");
+                        System.out.println("Mã khách hàng không hợp lệ");
                     }
                     break;
             }
