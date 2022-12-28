@@ -5,7 +5,7 @@ import case_study.models.Employee;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeRepositoryImpl implements IEmployeeRepository{
+public class EmployeeRepositoryImpl implements IEmployeeRepository {
     static List<Employee> employeeList = new ArrayList<>();
     static Employee employee1 = new Employee("Nguyễn Văn A", "14-2-2001", "Nam", "248761854", "0849950317",
             "quabd@gmall.com", "015", "trung cấp", "lễ tân", "7000000");
@@ -17,6 +17,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository{
             "fbjbsnj5@gmall.com", "003", "Đại học", "giám sát", "9000000");
     static Employee employee5 = new Employee("Nguyễn Văn E", "3-9-1994", "Nam", "248761854", "0354781027",
             "tfnnzx15@gmall.com", "001", "sau đại học", "quản lý", "14500000");
+
     static {
         employeeList.add(employee1);
         employeeList.add(employee2);
@@ -24,6 +25,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository{
         employeeList.add(employee4);
         employeeList.add(employee5);
     }
+
     @Override
     public void display() {
         for (int i = 0; i < employeeList.size(); i++) {
@@ -33,6 +35,36 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository{
 
     @Override
     public void add(Object object) {
+        employeeList.add((Employee) object);
+    }
 
+    @Override
+    public void remove(String employeeCode) {
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeCode.equals(employeeList.get(i).getEmployeeCode())) {
+                employeeList.remove(employeeList.get(i));
+                break;
+            }
+        }
+    }
+
+    @Override
+    public Employee findEmployeeCode(String employeeCode) {
+        for (Employee employee : employeeList) {
+            if (employeeCode.equals(employee.getEmployeeCode())) {
+                return employee;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void edit(Employee employee) {
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getEmployeeCode().equals(employee.getEmployeeCode())) {
+                employeeList.set(i, employee);
+                break;
+            }
+        }
     }
 }

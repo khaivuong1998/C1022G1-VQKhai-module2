@@ -56,7 +56,7 @@ public class Employee extends Persion{
                 ", level='" + level + '\'' +
                 ", position='" + position + '\'' +
                 ", wage=" + wage +
-                "name='" + super.getName() + '\'' +
+                ", name='" + super.getName() + '\'' +
                 ", dateOfBith='" + super.getDateOfBith() + '\'' +
                 ", sex='" + super.getSex() + '\'' +
                 ", idNumber=" + super.getIdNumber() +

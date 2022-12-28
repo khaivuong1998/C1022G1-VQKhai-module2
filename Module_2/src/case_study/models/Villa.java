@@ -8,8 +8,8 @@ public class Villa extends Facility {
     public Villa() {
     }
 
-    public Villa(String service, String usableArea, String rentalCosts, String maximumNumberPeople, String rentalType, String roomStandard, double swimmingPoolArea, String numberFloors) {
-        super(service, usableArea, rentalCosts, maximumNumberPeople, rentalType);
+    public Villa(String serviceName, String usableArea, String rentalCosts, String maximumNumberPeople, String rentalType, String serviceCode, String roomStandard, double swimmingPoolArea, String numberFloors) {
+        super(serviceName, usableArea, rentalCosts, maximumNumberPeople, rentalType, serviceCode);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberFloors = numberFloors;
@@ -45,7 +45,8 @@ public class Villa extends Facility {
                 "roomStandard='" + roomStandard + '\'' +
                 ", swimmingPoolArea=" + swimmingPoolArea +
                 ", numberFloors=" + numberFloors +
-                "service='" + super.getService() +
+                ", serviceCode=" + super.getServiceCode() +
+                ", serviceName='" + super.getServiceName() +
                 ", usableArea=" + super.getUsableArea() +
                 ", rentalCosts=" + super.getRentalCosts() +
                 ", maximumNumberPeople=" + super.getMaximumNumberPeople() +

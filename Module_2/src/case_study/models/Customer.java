@@ -45,7 +45,7 @@ public class Customer extends Persion {
                 "customerIsCode=" + customerIsCode +
                 ", typeGuest='" + typeGuest + '\'' +
                 ", address='" + address + '\'' +
-                "name='" + super.getName() + '\'' +
+                ", name='" + super.getName() + '\'' +
                 ", dateOfBith='" + super.getDateOfBith() + '\'' +
                 ", sex='" + super.getSex() + '\'' +
                 ", idNumber=" + super.getIdNumber() +

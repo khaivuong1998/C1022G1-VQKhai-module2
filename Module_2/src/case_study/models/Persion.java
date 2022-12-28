@@ -8,10 +8,10 @@ public abstract class Persion {
     private String phoneNumber;
     private String email;
 
-    public Persion() {
+    protected Persion() {
     }
 
-    public Persion(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email) {
+    protected Persion(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email) {
         this.name = name;
         this.dateOfBith = dateOfBith;
         this.sex = sex;
