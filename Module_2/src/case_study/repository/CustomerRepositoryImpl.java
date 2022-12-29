@@ -7,11 +7,11 @@ import java.util.List;
 
 public class CustomerRepositoryImpl implements ICustomerRepository {
     static List<Customer> customerList = new ArrayList<>();
-    static Customer customer1 = new Customer("Trần Văn Quang", "28-10-1993", "nam", "jbvhcuk", "058449955", "uuwuuwvvn185@.com", "054", "Member", "15 tran phu");
-    static Customer customer2 = new Customer("Trần Văn Thắng", "14-7-2001", "nam", "jbvhcuk", "051985266", "svjhvua@.com", "021", "Silver", "954 phạm thoại");
-    static Customer customer3 = new Customer("Trần Văn Đăng", "7-8-2002", "nam", "jbvhcuk", "0548415962", "vbjkvsv25@.com", "017", "Diamond", "34 hoàng diệu");
-    static Customer customer4 = new Customer("Trần Thị Ngọc", "12-3-1977", "nữ", "jbvhcuk", "025487496", "wuvhuwv@.com", "003", "Gold", "98 duong van an");
-    static Customer customer5 = new Customer("Nguyễn Trần Ánh Hoàng", "6-5-1998", "nữ", "jbvhcuk", "039587485", "wvug@.com", "08", "Platinium", "158 tran dinh nghe");
+    static Customer customer1 = new Customer("Trần Văn Quang", "28-10-1993", "nam", "925014760", "058449955", "uuwuuwvvn185@.com", "054", "Member", "15 tran phu");
+    static Customer customer2 = new Customer("Trần Văn Thắng", "14-7-2001", "nam", "325014710", "051985266", "svjhvua@.com", "021", "Silver", "954 phạm thoại");
+    static Customer customer3 = new Customer("Trần Văn Đăng", "7-8-2002", "nam", "620320415", "0548415962", "vbjkvsv25@.com", "017", "Diamond", "34 hoàng diệu");
+    static Customer customer4 = new Customer("Trần Thị Ngọc", "12-3-1977", "nữ", "102458795", "025487496", "wuvhuwv@.com", "003", "Gold", "98 duong van an");
+    static Customer customer5 = new Customer("Nguyễn Trần Ánh Hoàng", "6-5-1998", "nữ", "410023588", "039587485", "wvug@.com", "08", "Platinium", "158 tran dinh nghe");
 
     static {
         customerList.add(customer1);

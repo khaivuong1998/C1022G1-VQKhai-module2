@@ -16,6 +16,7 @@ public class FuramaController {
     public static void main(String[] args) {
         EmployeeManagement employeeManagement = new EmployeeManagement();
         CustomerManagement customerManagement = new CustomerManagement();
+        FacilityManagement facilityManagement = new FacilityManagement();
         Scanner scanner = new Scanner(System.in);
         int select = 0;
         do {
@@ -29,6 +30,7 @@ public class FuramaController {
                     customerManagement.controllerImpl();
                     break;
                 case 3:
+                    facilityManagement.controllerImpl();
                     break;
                 case 4:
                     break;

@@ -12,6 +12,11 @@ public class FacilityServiceImpl implements IFacilityService{
 
     @Override
     public void add(Object object) {
+        repository3.add(object);
+    }
 
+    @Override
+    public void displayFacilityMaintenance() {
+        repository3.displayFacilityMaintenance();
     }
 }

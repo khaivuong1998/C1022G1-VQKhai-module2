@@ -52,16 +52,16 @@ public class Employee extends Persion{
     @Override
     public String toString() {
         return "Employee{" +
-                "employeeCode=" + employeeCode +
-                ", level='" + level + '\'' +
-                ", position='" + position + '\'' +
-                ", wage=" + wage +
-                ", name='" + super.getName() + '\'' +
+                "name='" + super.getName() + '\'' +
                 ", dateOfBith='" + super.getDateOfBith() + '\'' +
                 ", sex='" + super.getSex() + '\'' +
-                ", idNumber=" + super.getIdNumber() +
-                ", phoneNumber=" + super.getPhoneNumber() +
+                ", idNumber='" + super.getIdNumber() + '\'' +
+                ", phoneNumber='" + super.getPhoneNumber() + '\'' +
                 ", email='" + super.getEmail() + '\'' +
+                ", employeeCode='" + employeeCode + '\'' +
+                ", level='" + level + '\'' +
+                ", position='" + position + '\'' +
+                ", wage='" + wage + '\'' +
                 '}';
     }
 }
