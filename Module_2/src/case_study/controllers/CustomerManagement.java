@@ -1,9 +1,8 @@
 package case_study.controllers;
 
 import case_study.models.Customer;
-import case_study.models.Employee;
-import case_study.services.CustomerServiceImpl;
-import case_study.services.ICustomerService;
+import case_study.services.class_services.CustomerServiceImpl;
+import case_study.services.interfaces.ICustomerService;
 
 import java.util.Scanner;
 

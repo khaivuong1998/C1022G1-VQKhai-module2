@@ -1,10 +1,11 @@
-package case_study.services;
+package case_study.services.class_services;
 
 import case_study.models.Employee;
-import case_study.repository.EmployeeRepositoryImpl;
-import case_study.repository.IEmployeeRepository;
+import case_study.repository.class_repositorys.EmployeeRepositoryImpl;
+import case_study.repository.interfaces.IEmployeeRepository;
+import case_study.services.interfaces.IEmployeeService;
 
-public class EmployeeServiceImpl implements IEmployeeService{
+public class EmployeeServiceImpl implements IEmployeeService {
     public IEmployeeRepository repository1 = new EmployeeRepositoryImpl();
     @Override
     public void display() {

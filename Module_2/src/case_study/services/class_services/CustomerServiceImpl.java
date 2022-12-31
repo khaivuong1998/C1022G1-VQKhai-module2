@@ -1,10 +1,11 @@
-package case_study.services;
+package case_study.services.class_services;
 
 import case_study.models.Customer;
-import case_study.repository.CustomerRepositoryImpl;
-import case_study.repository.ICustomerRepository;
+import case_study.repository.class_repositorys.CustomerRepositoryImpl;
+import case_study.repository.interfaces.ICustomerRepository;
+import case_study.services.interfaces.ICustomerService;
 
-public class CustomerServiceImpl implements ICustomerService{
+public class CustomerServiceImpl implements ICustomerService {
     public ICustomerRepository repository2 = new CustomerRepositoryImpl();
     @Override
     public void display() {

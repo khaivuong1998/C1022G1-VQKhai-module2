@@ -8,7 +8,8 @@ public class Customer extends Persion {
     public Customer() {
     }
 
-    public Customer(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email, String customerIsCode, String typeGuest, String address) {
+    public Customer(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email,
+                    String customerIsCode, String typeGuest, String address) {
         super(name, dateOfBith, sex, idNumber, phoneNumber, email);
         this.customerIsCode = customerIsCode;
         this.typeGuest = typeGuest;
@@ -52,5 +53,10 @@ public class Customer extends Persion {
                 ", typeGuest='" + typeGuest + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + this.customerIsCode + "," + this.typeGuest + "," + this.address;
     }
 }

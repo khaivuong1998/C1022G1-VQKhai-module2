@@ -79,4 +79,9 @@ public abstract class Persion {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public String toCSV() {
+        return this.name + "," + this.dateOfBith + "," + this.sex + "," + this.idNumber + "," +
+                this.phoneNumber + "," + this.email;
+    }
 }

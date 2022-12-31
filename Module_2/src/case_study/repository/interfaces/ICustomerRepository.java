@@ -1,4 +1,4 @@
-package case_study.repository;
+package case_study.repository.interfaces;
 
 import case_study.models.Customer;
 

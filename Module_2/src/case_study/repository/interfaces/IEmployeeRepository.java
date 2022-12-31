@@ -1,11 +1,9 @@
-package case_study.services;
+package case_study.repository.interfaces;
 
-import case_study.controllers.EmployeeManagement;
 import case_study.models.Employee;
 
-public interface IEmployeeService extends IService {
+public interface IEmployeeRepository extends IRepository {
     void remove(String employeeCode);
     Employee findEmployeeCode(String employeeCode);
     void edit(Employee employee);
-
 }

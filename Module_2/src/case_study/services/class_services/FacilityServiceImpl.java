@@ -1,9 +1,10 @@
-package case_study.services;
+package case_study.services.class_services;
 
-import case_study.repository.FacilityRepositoryImpl;
-import case_study.repository.IFacilityRepository;
+import case_study.repository.class_repositorys.FacilityRepositoryImpl;
+import case_study.repository.interfaces.IFacilityRepository;
+import case_study.services.interfaces.IFacilityService;
 
-public class FacilityServiceImpl implements IFacilityService{
+public class FacilityServiceImpl implements IFacilityService {
     public IFacilityRepository repository3 = new FacilityRepositoryImpl();
     @Override
     public void display() {

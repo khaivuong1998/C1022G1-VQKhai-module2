@@ -1,6 +1,8 @@
 package case_study.models;
 
-public class Employee extends Persion{
+import javax.security.auth.login.CredentialNotFoundException;
+
+public class Employee extends Persion {
     private String employeeCode;
     private String level;
     private String position;
@@ -9,7 +11,8 @@ public class Employee extends Persion{
     public Employee() {
     }
 
-    public Employee(String name, String dateOfBith, String sex, String idNumber, String phoneNumber, String email, String employeeCode, String level, String position, String wage) {
+    public Employee(String name, String dateOfBith, String sex, String idNumber, String phoneNumber,
+                    String email, String employeeCode, String level, String position, String wage) {
         super(name, dateOfBith, sex, idNumber, phoneNumber, email);
         this.employeeCode = employeeCode;
         this.level = level;
@@ -63,5 +66,10 @@ public class Employee extends Persion{
                 ", position='" + position + '\'' +
                 ", wage='" + wage + '\'' +
                 '}';
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + this.employeeCode + "," + this.level + "," + this.position + "," + this.wage;
     }
 }

@@ -1,4 +1,4 @@
-package case_study.services;
+package case_study.services.interfaces;
 
 import case_study.models.Customer;
 

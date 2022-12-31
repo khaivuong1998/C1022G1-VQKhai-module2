@@ -1,8 +1,9 @@
-package case_study.repository;
+package case_study.repository.class_repositorys;
 
 import case_study.models.Facility;
 import case_study.models.Room;
 import case_study.models.Villa;
+import case_study.repository.interfaces.IFacilityRepository;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
