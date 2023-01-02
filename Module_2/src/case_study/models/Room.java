@@ -1,6 +1,6 @@
 package case_study.models;
 
-public class Room extends Facility{
+public class Room extends Facility {
     private String freeServiceIncluded;
 
     public Room() {
@@ -28,8 +28,13 @@ public class Room extends Facility{
                 ", usableArea='" + super.getUsableArea() + '\'' +
                 ", rentalCosts='" + super.getRentalCosts() + '\'' +
                 ", maximumNumberPeople='" + super.getMaximumNumberPeople() + '\'' +
-                ", rentalType='" + super.getRentalType()+ '\'' +
+                ", rentalType='" + super.getRentalType() + '\'' +
                 ", freeServiceIncluded='" + freeServiceIncluded + '\'' +
                 '}';
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + this.freeServiceIncluded;
     }
 }

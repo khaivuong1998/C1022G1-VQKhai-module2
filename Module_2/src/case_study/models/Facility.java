@@ -79,4 +79,9 @@ public abstract class Facility {
                 ", rentalType=" + rentalType +
                 '}';
     }
+
+    public String toCSV() {
+        return this.serviceName + "," + this.usableArea + "," + this.rentalCosts + "," +
+                this.maximumNumberPeople + "," + this.rentalType + "," + this.serviceCode;
+    }
 }

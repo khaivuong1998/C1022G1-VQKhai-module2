@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ReadWriterFileCustomer {
 
-    public static final String FILE_CUSTOMER = "D:\\codegym\\C1022G1-VQKhai-module2\\Module_2\\src\\case_study\\file_utils\\file_customer.csv";
+    public static final String FILE_CUSTOMER = "D:\\codegym\\C1022G1-VQKhai-module2\\Module_2\\src\\case_study\\data\\file_customer.csv";
 
     public static List<Customer> readCustomerCSV() {
         List<Customer> customerList = new ArrayList<>();

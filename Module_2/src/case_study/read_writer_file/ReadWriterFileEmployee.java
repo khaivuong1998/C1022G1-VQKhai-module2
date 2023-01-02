@@ -65,15 +65,17 @@ public class ReadWriterFileEmployee {
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
             }
+            bufferedWriter.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            try {
-                bufferedWriter.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
         }
+//        finally {
+//            try {
+//                bufferedWriter.close();
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
     }
 
     public static void writerEmployee2CSV(List<Employee> employeeList) {
@@ -87,14 +89,16 @@ public class ReadWriterFileEmployee {
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
             }
+            bufferedWriter.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            try {
-                bufferedWriter.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
         }
+//        finally {
+//            try {
+//                bufferedWriter.close();
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
     }
 }
