@@ -46,24 +46,17 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     @Override
     public void remove(String employeeCode) {
         List<Employee> employeeList1 = ReadWriterFileEmployee.readEmployeeCSV();
+        boolean flag = false;
         for (int i = 0; i < employeeList1.size(); i++) {
             if (employeeCode.equals(employeeList1.get(i).getEmployeeCode())) {
                 employeeList1.remove(employeeList1.get(i));
+                flag = true;
                 break;
             }
         }
-        System.out.println(employeeList1.size());
-//        Employee newId = null;
-//        for (Employee employee : employeeList1) {
-//            if (employee.getEmployeeCode() == employeeCode) {
-//                newId = employee;
-//            }
-//        }
-//        if (newId == null) {
-//            System.out.println("error");
-//        } else {
-//            employeeList.remove(newId);
-//        }
+        if (!flag) {
+            System.out.println("Mã nhân viên không hợp lệ");
+        }
         ReadWriterFileEmployee.writerEmployee2CSV(employeeList1);
     }
 
@@ -81,11 +74,16 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     @Override
     public void edit(Employee employee) {
         List<Employee> employeeList1 = ReadWriterFileEmployee.readEmployeeCSV();
+        boolean flag = false;
         for (int i = 0; i < employeeList1.size(); i++) {
             if (employeeList1.get(i).getEmployeeCode().equals(employee.getEmployeeCode())) {
                 employeeList1.set(i, employee);
+                flag = true;
                 break;
             }
+        }
+        if (!flag) {
+            System.out.println("Mã nhân viên không đúng");
         }
         ReadWriterFileEmployee.writerEmployee2CSV(employeeList1);
     }
