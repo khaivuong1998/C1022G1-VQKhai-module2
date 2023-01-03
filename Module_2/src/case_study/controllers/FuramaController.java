@@ -40,6 +40,9 @@ public class FuramaController {
                     case 6:
                         System.exit(0);
                         break;
+                    default:
+                        System.err.println("Hãy nhập số từ 1 - 6 để chọn");
+                        break;
                 }
             } catch (NumberFormatException e) {
                 System.err.println("Mời nhập số để sử dụng dịch vụ");

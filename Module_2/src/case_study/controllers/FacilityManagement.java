@@ -176,7 +176,8 @@ public class FacilityManagement {
                         facilityService.displayFacilityMaintenance();
                         break;
                     default:
-                        System.err.println("Mời nhập số từ 1 - 3");
+                        System.err.println("Hãy nhập số từ 1 - 3 để chọn");
+                        break;
                 }
             } catch (NumberFormatException e) {
                 System.err.println("Mời nhập số để lựa chọn dịch vụ");
