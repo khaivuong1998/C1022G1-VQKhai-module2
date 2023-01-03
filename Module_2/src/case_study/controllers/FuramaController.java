@@ -21,24 +21,28 @@ public class FuramaController {
         int select = 0;
         do {
             displayMainMenu();
-            select = Integer.parseInt(scanner.nextLine());
-            switch (select) {
-                case 1:
-                    employeeManagement.controllerImpl();
-                    break;
-                case 2:
-                    customerManagement.controllerImpl();
-                    break;
-                case 3:
-                    facilityManagement.controllerImpl();
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    System.exit(0);
-                    break;
+            try {
+                select = Integer.parseInt(scanner.nextLine());
+                switch (select) {
+                    case 1:
+                        employeeManagement.controllerImpl();
+                        break;
+                    case 2:
+                        customerManagement.controllerImpl();
+                        break;
+                    case 3:
+                        facilityManagement.controllerImpl();
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        System.exit(0);
+                        break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Mời nhập số để sử dụng dịch vụ");
             }
         } while (true);
     }

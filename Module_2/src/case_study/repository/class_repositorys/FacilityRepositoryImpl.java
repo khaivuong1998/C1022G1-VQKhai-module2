@@ -1,8 +1,6 @@
 package case_study.repository.class_repositorys;
 
 import case_study.models.Facility;
-import case_study.models.Room;
-import case_study.models.Villa;
 import case_study.read_writer_file.ReadWriterFileRoom;
 import case_study.repository.interfaces.IFacilityRepository;
 
@@ -11,6 +9,7 @@ import java.util.Map;
 
 public class FacilityRepositoryImpl implements IFacilityRepository {
     static Map<Facility, Integer> facilityIntegerMap = new LinkedHashMap<>();
+//    static Map<Villa, Integer> facilityIntegerMap1 = new LinkedHashMap<>();
 //    static Facility facility1 = new Room("phong 1", "50", "1000000", "3", "nam", "SVRO-1654", "nước miễn phí");
 //    static Facility facility2 = new Room("phong 2", "50", "1000000", "3", "thang", "SVRO-1458", "nước miễn phí");
 //    static Facility facility3 = new Room("phong 3", "100", "2000000", "5", "nam", "SVRO-1848", "nước miễn phí");
@@ -29,7 +28,8 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
 
     @Override
     public void display() {
-        for (Map.Entry<Facility, Integer> entry : facilityIntegerMap.entrySet()) {
+        Map<Facility, Integer> facilityIntegerMap1 = ReadWriterFileRoom.readRoomVillaCSV();
+        for (Map.Entry<Facility, Integer> entry : facilityIntegerMap1.entrySet()) {
             if (entry.getValue() < 5) {
                 System.out.println(entry.getKey() + " - " + entry.getValue() + " lần sử dụng");
             }
@@ -38,10 +38,10 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
 
     @Override
     public void add(Object object) {
-        Facility roomOrVilla = (Facility) object;
-        facilityIntegerMap.put(roomOrVilla, 0);
-//        ReadWriterFileRoom.writerRoom1CSV(facilityIntegerMap, roomOrVilla);
+        Facility facility = (Facility) object;
         facilityIntegerMap.clear();
+        facilityIntegerMap.put(facility, 0);
+        ReadWriterFileRoom.writerRoomVillaCSV(facilityIntegerMap);
     }
 
     @Override
