@@ -175,13 +175,15 @@ public class FacilityManagement {
                     case 3:
                         facilityService.displayFacilityMaintenance();
                         break;
+                    case 4:
+                        return;
                     default:
-                        System.err.println("Hãy nhập số từ 1 - 3 để chọn");
+                        System.err.println("Hãy nhập số từ 1 - 4 để chọn");
                         break;
                 }
             } catch (NumberFormatException e) {
                 System.err.println("Mời nhập số để lựa chọn dịch vụ");
             }
-        } while (count != 4);
+        } while (true);
     }
 }

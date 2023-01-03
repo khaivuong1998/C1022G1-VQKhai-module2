@@ -92,6 +92,8 @@ public class EmployeeManagement {
                             System.out.println("Mã nhân viên không hợp lệ");
                         }
                         break;
+                    case 5:
+                        return;
                     default:
                         System.err.println("Hãy nhập số từ 1 - 5 để chọn");
                         break;
@@ -99,6 +101,6 @@ public class EmployeeManagement {
             } catch (NumberFormatException e) {
                 System.err.println("Mời nhập số để lựa chọn dịch vụ");
             }
-        } while (count != 5);
+        } while (true);
     }
 }

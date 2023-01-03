@@ -26,7 +26,7 @@ public class ReadWriterFileCustomer {
         Customer customer;
         while (true) {
             try {
-                if ((line = bufferedReader.readLine()) != null) {
+                if ((line = bufferedReader.readLine()) == null) {
                     break;
                 }
             } catch (IOException e) {
