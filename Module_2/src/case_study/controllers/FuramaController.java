@@ -42,7 +42,7 @@ public class FuramaController {
                         break;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Mời nhập số để sử dụng dịch vụ");
+                System.err.println("Mời nhập số để sử dụng dịch vụ");
             }
         } while (true);
     }

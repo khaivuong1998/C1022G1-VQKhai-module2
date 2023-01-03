@@ -18,7 +18,7 @@ public class ReadWriterFileCustomer {
         try {
             fileReader = new FileReader(FILE_CUSTOMER);
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         bufferedReader = new BufferedReader(fileReader);
         String line;
@@ -26,7 +26,7 @@ public class ReadWriterFileCustomer {
         Customer customer;
         while (true) {
             try {
-                if (!((line = bufferedReader.readLine()) != null)) {
+                if ((line = bufferedReader.readLine()) != null) {
                     break;
                 }
             } catch (IOException e) {
@@ -49,7 +49,7 @@ public class ReadWriterFileCustomer {
         try {
             bufferedReader.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return customerList;
     }
@@ -66,12 +66,12 @@ public class ReadWriterFileCustomer {
                 bufferedWriter.flush();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } finally {
             try {
                 bufferedWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }
@@ -88,12 +88,12 @@ public class ReadWriterFileCustomer {
                 bufferedWriter.flush();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } finally {
             try {
                 bufferedWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }

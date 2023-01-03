@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class ReadWriterFileRoom {
+public class ReadWriterFileRoomVilla {
 
     public static final String FILE_ROOM_VILLA = "D:\\codegym\\C1022G1-VQKhai-module2\\Module_2\\src\\case_study\\data\\file_room_villa.csv";
 
@@ -19,7 +19,7 @@ public class ReadWriterFileRoom {
         try {
             fileReader = new FileReader(FILE_ROOM_VILLA);
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         bufferedReader = new BufferedReader(fileReader);
         String line;
@@ -27,7 +27,7 @@ public class ReadWriterFileRoom {
         Facility facility;
         while (true) {
             try {
-                if (!((line = bufferedReader.readLine()) != null)) break;
+                if ((line = bufferedReader.readLine()) == null) break;
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -62,7 +62,7 @@ public class ReadWriterFileRoom {
         try {
             bufferedReader.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return facilityIntegerMap;
     }
@@ -84,12 +84,12 @@ public class ReadWriterFileRoom {
             }
             bufferedWriter.flush();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } finally {
             try {
                 bufferedWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }

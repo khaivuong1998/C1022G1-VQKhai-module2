@@ -1,7 +1,7 @@
 package case_study.repository.class_repositorys;
 
 import case_study.models.Facility;
-import case_study.read_writer_file.ReadWriterFileRoom;
+import case_study.read_writer_file.ReadWriterFileRoomVilla;
 import case_study.repository.interfaces.IFacilityRepository;
 
 import java.util.LinkedHashMap;
@@ -28,7 +28,7 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
 
     @Override
     public void display() {
-        Map<Facility, Integer> facilityIntegerMap1 = ReadWriterFileRoom.readRoomVillaCSV();
+        Map<Facility, Integer> facilityIntegerMap1 = ReadWriterFileRoomVilla.readRoomVillaCSV();
         for (Map.Entry<Facility, Integer> entry : facilityIntegerMap1.entrySet()) {
             if (entry.getValue() < 5) {
                 System.out.println(entry.getKey() + " - " + entry.getValue() + " lần sử dụng");
@@ -41,7 +41,7 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
         Facility facility = (Facility) object;
         facilityIntegerMap.clear();
         facilityIntegerMap.put(facility, 0);
-        ReadWriterFileRoom.writerRoomVillaCSV(facilityIntegerMap);
+        ReadWriterFileRoomVilla.writerRoomVillaCSV(facilityIntegerMap);
     }
 
     @Override

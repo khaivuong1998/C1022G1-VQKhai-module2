@@ -38,7 +38,7 @@ public class ReadWriterFileEmployee {
                     employeeList.add(employee);
                 }
             } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -46,7 +46,7 @@ public class ReadWriterFileEmployee {
             try {
                 bufferedReader.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
         return employeeList;
@@ -64,13 +64,13 @@ public class ReadWriterFileEmployee {
                 bufferedWriter.flush();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         finally {
             try {
                 bufferedWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }
@@ -87,12 +87,12 @@ public class ReadWriterFileEmployee {
                 bufferedWriter.flush();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } finally {
             try {
                 bufferedWriter.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }
